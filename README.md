@@ -1,27 +1,13 @@
 # Laboratorio 02
 Hoy utlizaremos docker compose para poder desplegar un servicio web y una base de
 datos
-STACK Tecnico
+# STACK Tecnico:
 API
 - Aplicación JAVASCRIPT dockerizarla (crear la imagen)
 - docker pull nmatsui/hello-world-api
-- clever_montalcini 3001
-- condescending_davinci 3000
 - $ docker run -d --rm -p 3000:3000 nmatsui/hello-world-api
--
-BD PostgreSQL
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-COMANDOS
-Deben especificar los comandos que voy a ejecutar
-```bash
-docker compose up -d
-```
-CONFIGURACIONES
-.env
-```
-VAR=VALUE
-```
-# Actividad
+
+# Actividad - CULMINADA (X)
 Trabajar un docker compose, especificando configuración y comandos para despliegue.(x)
 Debe permitir lo siguiente:
 - 3 copias de una API build local(x)
@@ -50,26 +36,44 @@ DRIVER: El controlador que gestiona la red:
 - none: Desactiva completamente las interfaces de red del contenedor.
 
 Comando para listar las redes:
-
+```bash
 docker network ls
-
+```
 Fuente:
 https://iesgn.github.io/curso_docker_2021/sesion4/tipos.html
 # Tipos de volumen en docker
 
 Comando para listar los volumenes:
-
+```bash
 docker volume ls
-
+```
 Named Volumes (Volúmenes con nombre):
 - Gestionados completamente por Docker dentro del directorio del sistema.
-
+En mi trabajo lo aplico en la declaración de la base de datos, ya que los datos persistirán aunque se destruya la imagen.
+  
 Bind Mounts (Montajes vinculados):
 - Mapean un archivo o directorio específico de tu máquina host.
+En mi trabajo lo aplico en la declaración de las APIs, ya que sirve para registrar los logs de forma local en el contenedor
+y permite que sean más legibles.
 
 tmpfs Mounts:
 - Se almacenan únicamente en la memoria RAM del host, no en el disco.
+No lo aplico en mi trabajo, porque no uso archivos temporales.
 
+# COMANDOS DE DESPLIEGUE
+1. Clonar el repositorio
+```bash
+git clone [https://github.com/PieroAguirreDC/Ejercicio-Docker-Compose.git](https://github.com/PieroAguirreDC/Ejercicio-Docker-Compose.git)
+cd Ejercicio-Docker-Compose
+```
+2. Configurar las variables de Entorno
+```bash
+Copy-Item .env.example .env
+```
+3. Despliegue de los contenedores docker
+```bash
+docker compose up -d --build
+```
 
 # APIs DESPLEGADAS
 Docker Desktop (Captura):
