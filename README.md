@@ -24,16 +24,16 @@ VAR=VALUE
 # Actividad
 Trabajar un docker compose, especificando configuración y comandos para despliegue.
 Debe permitir lo siguiente:
-- 3 copias de una API build local
+- 3 copias de una API build local(x)
 - Configuración BD
-- Uso de volúmenes
-- Uso de variables de entorno
-- En README. Responder los tipos de redes y los tipos de volumen que existen en
+- Uso de volúmenes(x)
+- Uso de variables de entorno(x)
+- En README. Responder los tipos de redes y los tipos de volumen que existen en(x)
 docker
-- Hacer uso de Conventional Commits
-- Repositorio publico
-- Uso de .gitignore
-- Opcional: Capturas de su proyecto desplegado
+- Hacer uso de Conventional Commits(x)
+- Repositorio publico(x)
+- Uso de .gitignore(x)
+- Opcional: Capturas de su proyecto desplegado(x)
 # Tipos de redes en docker
 ![alt text](image.png)
 NETWORK ID: El identificador único de la red.
@@ -67,7 +67,17 @@ Named Volumes (Volúmenes con nombre):
 Bind Mounts (Montajes vinculados):
 - Mapean un archivo o directorio específico de tu máquina host.
 
-Fuentes:
-https://www.zymeralabs.com/docker-volumes-que-son-tipos-y-ejemplos-reales/#tipos-de-almacenamiento-en-docker
 tmpfs Mounts:
 - Se almacenan únicamente en la memoria RAM del host, no en el disco.
+
+
+# APIs DESPLEGADAS
+Docker Desktop (Captura):
+![alt text](image-1.png)
+
+API 1:
+![alt text](image-2.png)
+API 2:
+![alt text](image-3.png)
+API 3: 
+![alt text](image-4.png)
