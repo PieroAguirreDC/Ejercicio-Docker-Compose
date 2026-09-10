@@ -67,5 +67,7 @@ Named Volumes (Volúmenes con nombre):
 Bind Mounts (Montajes vinculados):
 - Mapean un archivo o directorio específico de tu máquina host.
 
+Fuentes:
+https://www.zymeralabs.com/docker-volumes-que-son-tipos-y-ejemplos-reales/#tipos-de-almacenamiento-en-docker
 tmpfs Mounts:
 - Se almacenan únicamente en la memoria RAM del host, no en el disco.
