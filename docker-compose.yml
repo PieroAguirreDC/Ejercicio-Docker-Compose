@@ -1,0 +1,36 @@
+services:
+  apiweb01:
+    container_name: apiweb01
+    build: ./api
+    environment:
+      - PORT=3000
+      - MESSAGE=${MESSAGE_APIWEB01}
+    ports:
+      - "${PORT_APIWEB01}:3000"
+    volumes:
+      - ./logs/apiweb01:/opt/logs
+    restart: always
+
+  apiweb02:
+    container_name: apiweb02
+    build: ./api
+    environment:
+      - PORT=3000
+      - MESSAGE=${MESSAGE_APIWEB02}
+    ports:
+      - "${PORT_APIWEB02}:3000"
+    volumes:
+      - ./logs/apiweb02:/opt/logs
+    restart: always
+
+  api03web:
+    container_name: apiweb03
+    build: ./api
+    environment:
+      - PORT=3000
+      - MESSAGE=${MESSAGE_APIWEB03}
+    ports:
+      - "${PORT_APIWEB03}:3000"
+    volumes:
+      - ./logs/apiweb03:/opt/logs
+    restart: always
