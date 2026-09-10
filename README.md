@@ -60,6 +60,9 @@ tmpfs Mounts:
 - Se almacenan únicamente en la memoria RAM del host, no en el disco.
 No lo aplico en mi trabajo, porque no uso archivos temporales.
 
+Fuente:
+https://docs.docker.com/engine/storage/#bind-mounts
+
 # COMANDOS DE DESPLIEGUE
 1. Clonar el repositorio
 ```bash
